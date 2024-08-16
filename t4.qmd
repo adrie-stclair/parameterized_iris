@@ -1,0 +1,51 @@
+---
+format: pdf
+execute: 
+  echo: false
+  warning: false
+  message: false
+params:
+  Species: "setosa"
+  image_paths: "media/setosa.png"
+  descriptions: "Here is a brief description"
+bibliography: references.bib
+---
+
+```{r}
+
+```
+
+
+```{r}
+#| echo: false
+
+library(dplyr)
+library(ggplot2)
+
+```
+
+## Iris `r {params$Species}`
+
+***Iris `r {params$Species}`***
+
+![Iris `r {params$Species}`](`r {params$image_paths}`)  
+`r {params$descriptions}`
+
+Here is a very basic plot showing the relationship of petal length to petal width. Not surprisingly, as the length increases, so too does the width.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+data <- iris
+
+ggplot(iris %>% 
+         filter(Species == params$Species), aes(x = Petal.Length, y = Petal.Width)) +
+  xlab("Petal Length") +
+  ylab("Petal Width") +
+  geom_point() +
+  geom_smooth(method='lm') +
+  labs(title = stringr::str_glue("Petal Width vs Petal Length in Iris {params$Species}"))
+
+```
