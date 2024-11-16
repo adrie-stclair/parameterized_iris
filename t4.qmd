@@ -71,6 +71,6 @@ plot1 <- ggplot(iris, aes(x = Petal.Length, y = Petal.Width, shape = Species, co
                     legend.background = element_rect(fill = "transparent", color = NA) )
               
           
-ggsave(plot1, "media/plot1")
+ggsave("media/plot.png")
 ```
 
