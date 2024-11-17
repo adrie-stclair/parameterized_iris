@@ -1,0 +1,84 @@
+
+---
+format:
+  typst
+---
+
+
+```{=typst}
+
+
+     #set text(
+        font: "Fjord",
+        size: 12pt
+      )
+      
+      #set page(
+        paper: "us-letter",
+        margin: (x: 0in, y: 0in),
+        fill: rgb("ccd3dbff")
+      )
+      
+      #set par(
+        justify: true,
+        leading: 0.52em,
+      )
+      
+      // banner
+      #place(top, image("media/iris.png", width: 100%, height: auto))
+      
+      // Iris name title
+      #place(dx:2.4in, dy: .6in)[
+        #smallcaps(text(stroke:black, white, size:100pt)[Iris])
+      ]
+      
+      // species
+      #place(dx:4in, dy: 1.5in)[
+        #text(font: "Allura", stroke:0.8pt + black, white, size:90pt)[versicolor]
+      ]
+      
+      // green border
+      #place(dx: 0.3in, dy:2.75in)[
+        #rect(fill: rgb("7db273fd"), width: 7.9in, height: 0.35in)
+      ]
+      
+      // text body rectangle
+      #place(dx: 0.3in, dy:3.1in)[
+        #rect(fill: rgb("b3bdc9ff"), width: 7.9in, height: 3.5in)
+      ]
+      
+      #place(dx:0.5in, dy:3.4in)[
+          #block(
+            width:4in, 
+            height: 4in, 
+            "Iris setosa has a deep violet-blue flower. The sepals are deeply-veined dark purple with a yellow-white signal. The petals are very reduced in size, not exceeding the base of the sepals. Beachhead iris flowers in late spring, on a one-flowered inflorescence. The leaves are stiff, narrow and green, with a purplish-tinged base. The leaves are up to 12 inches high. The leaves arise from shallowly rooted, large, branching rhizomes forming clumps.[@irisset]"
+          )
+      ]
+      
+      // photo
+      #place(dx:4.8in, dy:3.35in)[
+        #image("media/versicolor.png", width: 35%)
+      ]
+      
+      // green border
+      #place(dx: 0.3in, dy:6.9in)[
+        #rect(fill: rgb("7db273fd"), width: 7.9in, height: 0.35in)
+      ]
+      
+      // text body rectangle
+      #place(dx: 0.3in, dy:7.25in)[
+        #rect(fill: rgb("b3bdc9ff"), width: 7.9in, height: 3.5in)
+      ]
+      
+      // graph
+      #place(dx:.6in, dy:7.55in)[
+        #image("media/versicolor.png", width: 35%)
+      ]
+      
+      // graph verbage
+      #place(dx:4.25in, dy:7.55in)[
+          #block(width:3.7in, height: 4in, "Iris setosa has a deep violet blue flower. The sepals are deeply-veined dark purple with a yellow-white signal. The petals are very reduced in size, not exceeding the base of the sepals. Beachhead iris flowers in late spring, on a one flowered inflorescence. The leaves are stiff, narrow and green, with a purplish tinged base. The leaves are up to 12 inches high. The leaves arise from shallowly rooted, large, branching rhizomes forming clumps.[@irisset]")
+        ]
+
+```
+

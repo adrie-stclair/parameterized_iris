@@ -1,0 +1,20 @@
+
+---
+format:
+  typst
+---
+
+
+```{=typst}
+
+#import "conf.qmd": conf
+#show: conf.with(
+  species: [
+    setosa
+  ],
+  description: [Iris setosa has a deep violet blue flower. The sepals are deeply-veined dark purple with a yellow-white signal. The petals are very reduced in size, not exceeding the base of the sepals. Beachhead iris flowers in late spring, on a one flowered inflorescence. The leaves are stiff, narrow and green, with a purplish tinged.]
+  ,
+
+)
+```
+
